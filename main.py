@@ -12,9 +12,7 @@ game = GameManager()
 async def websocket_endpoint(websocket: WebSocket, player_id: str):
     await manager.connect(websocket, player_id)
     game.add_player(player_id, websocket)
-
     await websocket.send_json(game.game.get_state())
-
 
     try:
         while True:

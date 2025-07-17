@@ -23,7 +23,6 @@ async def play(player_id):
             if "error" in data:
                 print(f"Error: {data['error']}")
                 if waiting_for_input:
-                    # Re-prompt the player
                     while True:
                         move = input(f"{player_id}, retry your move (0-8): ")
                         try:

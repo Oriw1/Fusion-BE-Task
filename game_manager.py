@@ -1,5 +1,4 @@
 import asyncio
-
 from fastapi import WebSocket
 from tic_tac_toe import TicTacToe
 
@@ -16,7 +15,7 @@ class GameManager:
         self.players.pop(player_id, None)
 
     async def receive_move(self, player_id: str, position: int):
-        if player_id[6] != self.game.current_player:  # "playerX" or "playerO"
+        if player_id[6] != self.game.current_player:
             await self.players[player_id].send_json({"error": "Not your turn"})
             return
 
