@@ -1,7 +1,5 @@
 # Fusion backend task
 
-This is a Backend programming task in python for the company Fusion.
-This task is for a tic-tac-toe game where two players can play together.
 ---
 
 ## Features
