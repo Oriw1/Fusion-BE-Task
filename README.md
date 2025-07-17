@@ -53,5 +53,4 @@ fixing communication mistakes that came from the AI code.
 
 I followed a similar protocol for writing the game function part, asking chatgpt for the basics and then expanding upon
 them.
----
 
