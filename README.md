@@ -26,13 +26,23 @@ pip install -r requirements.txt
 
 ## Running the game
 
-- Run server side, with command:
+-Make sure Docker is installed and running 
+
+-Run Redis with, with command:
 ```bash
-uvicorn main:app --reload --port 8000
+docker run -d -p 6379:6379 --name redis redis
 ```
-- for each player in a separate terminal run the websocket:
+- Run the first server, with command:
 ```bash
-python ws_client.py
+uvicorn server_playerX:app --port 3001 
+```
+- Run the first server, with command:
+```bash
+uvicorn server_playerO:app --port 3002
+```
+- for each player in a separate terminal run the script:
+```bash
+python client_script.py  
 ```
 - upon prompt enter "playerX" or "playerO"
 
